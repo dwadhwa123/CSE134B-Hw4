@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="header">
+    <header>
+      <canvas id="myCanvas" width="500" height="34"></canvas>
+    
+      <noscript>
+        <h1> Dhruv Wadhwa's Portfolio </h1>
+      </noscript>
+    
+      <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+      
+        ctx.font = '25px Arial';
+        ctx.fillStyle = 'orange';
+      
+        var text = "Dhruv Wadhwa's Portfolio";
+        ctx.fillText(text, 20, 30);
+      </script>
+       
+      <section id="link-section">
+        </script>
+          <nav>
+            <ul id="navigation_links">
+                <li><a href="index.html" target="_top">Home</a></li>
+                <li><a href="about.html" target="_top">About</a></li>
+                <li><a href="skills.html" target="_top">Skills</a></li>
+                <li><a href="projects.html" target="_top">Projects</a></li>
+                <li><a href="faq.html" target="_top">FAQ</a></li>
+            </ul>
+        </nav>
+      </section>
+    
+      <search id="search-section">
+        <form action="/search_results" method="get">
+        <input type="text" id="search-query" name="query" placeholder="Enter search term" required="required">
+        <button type="submit">Search</button>
+        <label for="search-query"></label>
+      </form>
+      </search>
+    
+      </header>
+</body>
+
+</html>

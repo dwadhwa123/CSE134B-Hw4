@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <title>Dhruv Wadhwa's Portfolio</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dhruv">
+    <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="certificate.png" as="image">
+
+  <style scoped>
+    #soft_skill_list{
+      color: black;
+      font-size: 1.25rem;
+      list-style-type: square;
+      align-items: center;
+    }
+  </style>
+  </head>
+
+
+<body>
+  <iframe class="header_frame" src="header.html" style="width: 100%; height: 150px"></iframe>
+
+  <main>
+    <section id="skills">
+        <div class="Technical_skills">
+        <h2>Skills Section</h2>
+        <h3>Technical Skills</h3>
+        <table id="skills-table">
+        <caption>Computer Science Skills + Proficiency</caption>
+        <colgroup>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+            <th>Computer Science Skills</th>
+            <th>Proficiency Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Java</td>
+            <td>Advanced</td>
+            </tr>
+            <tr>
+            <td>Python</td>
+            <td>Advanced</td>
+            </tr>
+            <tr>
+            <td>C</td>
+            <td>Intermediate</td>
+            </tr>
+            <tr>
+            <td><abbr title="Structured Query Language">SQL</abbr></td>
+            <td>Advanced</td>
+            </tr>
+            <tr>
+            <td>HTML</td>
+            <td>Intermediate</td>
+            </tr>
+            <tr>
+            <td>CSS</td>
+            <td><del>Basic</del><ins>Intermediate</ins></td>
+            </tr>
+            <tr>
+            <td>Javascript</td>
+            <td>Intermediate</td>
+            </tr>
+            <tr>
+            <td>Computer Networks</td>
+            <td>Advanced</td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
+
+        <template id="skill-template">
+          <tr>
+              <td class="skill-name"></td>
+              <td class="skill-level"></td>
+          </tr>
+        </template>
+
+        <div class="Soft_skills">
+        <h3>Soft Skills</h3>
+        <ul id="soft_skill_list">
+        <li>Communication</li>
+        <li>Teamwork</li>
+        <li>Problem-Solving</li>
+        <li>Time Management</li>
+        <li>Adaptability</li>
+        </ul>
+        </div>
+      </section>
+
+    <figure id="certificate_fig">
+      <picture>
+        <source srcset="media/certificate_large.jpg" media="(min-width: 1500px)" type="image/png">
+      
+        <source srcset="media/certificate.jpg" media="(min-width: 1200px) and (max-width: 1500px)" type="image/png">
+
+        <source srcset="media/certificate_medium.jpg" media="(min-width: 800px) and (max-width: 1199px)" type="image/png">
+
+        <source srcset="media/certificate_small.jpg" media="(max-width: 800px)" type="image/png">
+      
+        <img src="media/certificate.jpg" alt="Python Certificate" class="skill_image" loading="lazy">
+        
+      </picture>
+      <figcaption><em>Python Course Certificate</em></figcaption>
+    </figure>
+  </main>
+
+  <iframe class="footer_frame" src="footer.html" style="width: 100%; height: 500px"></iframe>
+</body>
+</html>

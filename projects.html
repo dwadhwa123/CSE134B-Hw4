@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <title>Dhruv Wadhwa's Portfolio</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dhruv">
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  </head>
+
+
+<body>
+  <iframe class="header_frame" src="header.html" style="width: 100%; height: 150px"></iframe>
+
+  <main>
+    <section id="projects">
+        <h2>My Projects And Experiences</h2>
+        <dl>
+          <dt>Business Game with <cite><a href="https://www.ceregem.net/blog" target="_blank" title="Ceregem Technologies Website">Ceregem Technologies</a></cite></dt>
+            <dd><strong>Summary:</strong> I worked with two professors to create a real time game using <span class="programming-skill">JavaFX</span> for the UI components that allows players to make business decisions such as cost choices and advertising and gives out profits, sales using a formula.
+              I managed my source control with Git. For example, I use: 
+              <kbd><code>git status</code></kbd> to check the status of my repository.
+              <kbd><code>git commit -m "Your commit message"</code></kbd> to commit changes to the repository.
+              In order to quickly update the results based on the decisions made by the players, I stored the decisions in <dfn><span class="programming-skill">MongoDB</span></dfn>, which is a database that can store data in a document oriented format and used listeners to see when they were changed. 
+              Using these listners, I could instantaneously update the UI. The reason I used MongoDB is because the information sent between users is fixed into a few decisions so there was no need to overcomplicate it by doing a client-server application.
+              </dd>
+
+          <br>
+  
+          <dt>Pantry Pal</dt>
+            <dd><strong>Summary:</strong> I worked with a group of 6 people to create a recipe generating and storing application. We used the <span class="programming-skill">Whisper API</span> to take in speech input of ingredients, then using those ingredients
+              generating a recipe with a <span class="programming-skill">Chatgpt API</span>. Along with the recipe, we used the <span class="programming-skill">Dalle API</span> to generate images. Same as the game I created, we also used JavaFX for the UI. Finally, we also used a MongoDB server in order to save information from accounts so that you can log into an account from any device. 
+              Working on this project helped improve my communication and teamwork as it forced me to compromise and make decisions that everyone could get behind.
+           </dd>
+
+           <br>
+          
+          <dt>TFIDF Vectorizer to predict MBTI type</dt>
+            <dd><strong>Summary:</strong> I created a <span class="programming-skill">TDIDF Vectorizer</span> with the purpose of taking in strings 
+              representing the post history of the user and using that to predict the <abbr title="Myers Brigss Type Indicator">MBTI</abbr> of that user. I used supervised learning to train the model as the code shows below. 
+            
+              <pre>
+                tfidf_vectorizer = TfidfVectorizer(stop_words='english', max_features=5000)
+    
+                # Fit and transform the training data, and transform the test data
+                X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
+                X_test_tfidf = tfidf_vectorizer.transform(X_test)
+                log_reg = LogisticRegression(max_iter=1000)
+    
+                # Train the model
+                log_reg.fit(X_train_tfidf, y_train)
+              </pre>
+            </dd>
+
+
+          <dt>Creating a custom NFA </dt>
+          <dd><strong>Summary:</strong> I created a <abbr title="NonDeterminisitc Finite Automatic"><span class="programming-skill">NFA</span></abbr> which took in an input of a string and returned the string + 'ab' if of even length or the string minus its last character if of odd length.
+            I really struggled with this project because it was very open ended in terms of the coding aspect and I wans't sure how I wanted to approach it. I thought about making classes/objects to represent the different states but ultimately decided on using boolean values.
+            Even though it wasn't the most difficult project, it really helped refine my process in terms of how to approach a new problem that I haven't faced before. 
+          </dd>
+          <br>
+          <video controls>
+            <source src="media/CSE105Project.mp4" type="video/mp4" preload="none">
+            Video not supported.
+          </video>
+
+        </dl>
+
+      </section>
+  </main>
+
+  <iframe class="footer_frame" src="footer.html" style="width: 100%; height: 500px"></iframe>
+</body>
+</html>

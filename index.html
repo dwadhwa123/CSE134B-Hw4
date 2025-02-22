@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <title>Dhruv Wadhwa's Portfolio</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dhruv">
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio of my skills, experiences">
+    <meta name="robots" content="index, follow">
+    <link rel="preload" href="media/face.jpg" as="image">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+
+<body>
+  <iframe class="header_frame" src="header.html" style="width: 100%; height: 150px"></iframe>
+    
+
+  <main>
+    <div id="home">
+        <figure>
+          <picture>
+            <source srcset="media/face_large.jpg" media="(min-width: 1200px) and (max-width: 1499px)" type="image/jpeg">
+
+            <source srcset="media/face_medium.jpg" media="(min-width: 800px) and (max-width: 1199px)" type="image/jpeg">
+          
+            <source srcset="media/face_small.jpg" media="(max-width: 800px)" type="image/jpeg">
+
+            <source srcset="media/face.jpg" media="(min-width: 1500px)" type="image/jpeg">
+          
+            <img src="media/face.jpg" alt="Headshot" class="headshot_image" loading="lazy">
+
+          </picture>
+          <figcaption><em>Computer Science enthusiast with a focus on Software Development and Artifical Intelligence</em></figcaption>
+        </figure>
+        
+      </div>
+  </main>
+
+  <hello-world></hello-world>
+
+  <!-- Used chatgpt to generate this code -->
+  <script>
+      class HelloWorld extends HTMLElement {
+          constructor() {
+              super(); 
+          }
+
+          connectedCallback() {
+              console.log("Hello World!");
+          }
+      }
+      customElements.define('hello-world', HelloWorld);
+  </script>
+
+<iframe class="footer_frame" src="footer.html" style="width: 100%; height: 500px"></iframe>
+</body>
+</html>
