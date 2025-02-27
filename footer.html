@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
+   <style>
       textarea:invalid, input:invalid{
         border-color: red;
         border-width: 1px;
@@ -29,8 +29,14 @@
         content: "Invalid input, please enter a valid age.";
       }
 
-      #error-message, #info-message {
+      #error-message {
         display: none;
+        color: red;
+      }
+
+      #info-message{
+        display: none;
+        color: green
       }
 
       .fade-out {
@@ -41,7 +47,10 @@
         font-size: 0.8rem;
       }
 
-  </style>
+      
+
+  </style> 
+  
 </head>
 
 <body class="footer">
@@ -63,7 +72,7 @@
         
           <label for="comments">Comments: <span class="required_indicator">*</span></label><br>
           <textarea id="comments" name="comments" required minlength="10" maxlength="500" pattern="^[a-zA-Z0-9\s.,!?'-]*$"></textarea>
-          <small class="hint">Max 500 characters, no special symbols.</small> <br>
+          <!-- <small class="hint">Max 500 characters, no special symbols.</small> <br> -->
 
           <div id="character_count">500 characters remaining</div>
 
