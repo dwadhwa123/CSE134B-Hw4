@@ -68,7 +68,7 @@
           <input type="email" id="email" name="email" required><br>
 
           <label for="reason">Phone Number:</label><br>
-          <input type="tel" id="number" name="number" placeholder="555-555-5555" ><br>
+          <input type="tel" id="number" name="number" placeholder="555-555-5555" pattern="^\d{3}-\d{3}-\d{4}$"><br>
         
           <label for="comments">Comments: <span class="required_indicator">*</span></label><br>
           <textarea id="comments" name="comments" required minlength="10" maxlength="500" pattern="^[a-zA-Z0-9\s.,!?'-]*$"></textarea>
