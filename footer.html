@@ -4,6 +4,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      textarea:invalid, input:invalid{
+        border-color: red;
+        border-width: 1px;
+      }
+
+      textarea:valid, input:valid{
+        border-color: green;
+        border-width: 1.5px;
+      }
+
+      #name {
+        margin-bottom: 5px;
+      }
+
+      input:focus, textarea:focus {
+        border-color: #007bff;
+        border-width: 1.5px !important;
+        outline: none;
+      }
+
+      #email:invalid + #error_message{
+        content: "Invalid input, please enter a valid age.";
+      }
+
+      #error-message, #info-message {
+        display: none;
+      }
+
+      .fade-out {
+        animation: fadeOut 1s forwards;
+      }
+
+      #character_count{
+        font-size: 0.8rem;
+      }
+
+  </style>
 </head>
 
 <body class="footer">
@@ -27,12 +65,42 @@
           <textarea id="comments" name="comments" required minlength="10" maxlength="500" pattern="^[a-zA-Z0-9\s.,!?'-]*$"></textarea>
           <small class="hint">Max 500 characters, no special symbols.</small> <br>
 
+          <div id="character_count">500 characters remaining</div>
+
           <output id="error-message" class="error">There was an error with your form submission.</output> <br>
           <output id="info-message" class="info">This is some information about your form submission.</output> <br>
           <button type="submit">Send Message</button>
 
       </fieldset>
     </form>
+
+    <script>
+
+      const commentsField = document.getElementById('comments');
+      const errorMessage = document.getElementById('error-message');
+      
+      commentsField.addEventListener('input', function() {
+        const regex = /[^a-zA-Z0-9\s.,!?'-]/; 
+        
+        if (regex.test(commentsField.value)) {
+          errorMessage.style.display = 'block';
+          errorMessage.innerText = 'You have typed an illegal character. Please remove it.';
+        } 
+        else {
+          errorMessage.style.display = 'none';
+        }
+
+        const length = commentsField.value.length;
+        const charactersLeft = 500 - length;
+
+        const charCount = document.getElementById('character_count');
+
+        charCount.textContent = `${charactersLeft} characters remaining`;
+
+      });
+
+
+    </script>
 
   <address>
     <ol>

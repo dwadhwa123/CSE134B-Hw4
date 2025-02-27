@@ -6,23 +6,31 @@
         <link rel="stylesheet" href="css/style.css">
         <style>
             textarea:invalid, input:invalid{
-            border-color: red;
-            border-width: 1px;
+              border-color: red;
+              border-width: 1px;
             }
 
             textarea:valid, input:valid{
-            border-color: green;
-            border-width: 1.5px;
+              border-color: green;
+              border-width: 1.5px;
             }
 
             #name {
-            margin-bottom: 5px;
+              margin-bottom: 5px;
             }
 
             input:focus, textarea:focus {
-            border-color: #007bff;
-            border-width: 1.5px !important;
-            outline: none;
+              border-color: #007bff;
+              border-width: 1.5px !important;
+              outline: none;
+            }
+
+            #email:invalid + #error_message{
+              content: "Invalid input, please enter a valid age.";
+            }
+
+            #error-message, #info-message {
+              display: none;
             }
 
         </style>
