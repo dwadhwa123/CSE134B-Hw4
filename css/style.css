@@ -157,9 +157,12 @@
     margin: 5px 20px;
   }
 
-  #message{
+  #comments{
+    width: 500px;
     max-width: 500px;
-    max-height: 40px;
+    min-width: 500px;
+    max-height: 200px;
+    height: 80px;
   }
 
 }
@@ -529,7 +532,6 @@ body {
   background-color: lightyellow;
 }
 
-/* Error & Info Message Styling */
 output {
   font-size: 0.85rem;
   padding: 0.2rem;
