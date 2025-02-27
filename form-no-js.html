@@ -1,0 +1,62 @@
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Only CS/HTML</title>
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            textarea:invalid, input:invalid{
+            border-color: red;
+            border-width: 1px;
+            }
+
+            textarea:valid, input:valid{
+            border-color: green;
+            border-width: 1.5px;
+            }
+
+            #name {
+            margin-bottom: 5px;
+            }
+
+            input:focus, textarea:focus {
+            border-color: #007bff;
+            border-width: 1.5px !important;
+            outline: none;
+            }
+
+        </style>
+    </head>
+    
+    <body class="footer">
+    <footer>
+        <h2>Contact Me</h2>
+        <form action="https://httpbin.org/post" method="post">
+          <fieldset>
+            <legend>Personal Information</legend>
+              <input type="hidden" name="possible_bot" value="true" required>
+    
+              <label for="name">Name: <span class="required_indicator">*</span></label><br>
+              <input type="text" id="name" name="name" required><br>
+              
+              <label for="email">Email: <span class="required_indicator">*</span></label><br>
+              <input type="email" id="email" name="email" required><br>
+    
+              <label for="reason">Phone Number:</label><br>
+              <input type="tel" id="number" name="number" placeholder="555-555-5555" pattern="^\d{3}-\d{3}-\d{4}$"><br>
+            
+              <label for="message">Message: <span class="required_indicator">*</span></label><br>
+              <textarea id="message" name="message" required minlength="10" maxlength="500" pattern="^[a-zA-Z0-9\s.,!?'-]*$"></textarea>
+              <small class="hint">Max 500 characters, no special symbols.</small> <br>
+    
+              <output id="error-message" class="error">There was an error with your form submission.</output> <br>
+              <output id="info-message" class="info">This is some information about your form submission.</output> <br>
+              <button type="submit">Send Message</button>
+    
+          </fieldset>
+        </form>
+    
+    </body>
+      
+      
+      </footer>
