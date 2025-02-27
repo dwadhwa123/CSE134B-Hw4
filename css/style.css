@@ -100,6 +100,7 @@
     flex-direction: column;             
     font-family: Arial, sans-serif;
     margin: 20px;
+    max-width: 600px;
 }
 
   fieldset {     
@@ -133,7 +134,6 @@
   }
 
   form {
-    max-width: 550px;
     margin: 5px 20px;
     padding: 20px;
     background-color: lightcyan;
