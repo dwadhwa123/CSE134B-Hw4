@@ -6,11 +6,53 @@
     <meta name="author" content="Dhruv">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form_style.css">
   </head>
 
 
 <body>
-  <iframe class="header_frame" src="header.html" style="width: 100%; height: 150px"></iframe>
+  <header>
+    <canvas id="myCanvas" width="500" height="34"></canvas>
+  
+    <noscript>
+      <h1> Dhruv Wadhwa's Portfolio </h1>
+    </noscript>
+  
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var ctx = canvas.getContext('2d');
+    
+      ctx.font = '25px Arial';
+      ctx.fillStyle = 'green';
+    
+      var text = "Dhruv Wadhwa's Portfolio";
+      ctx.fillText(text, 20, 30);
+    </script>
+     
+    <section id="link-section">
+      </script>
+        <nav>
+          <ul id="navigation_links">
+              <li><a href="index.html" target="_top">Home</a></li>
+              <li><a href="about.html" target="_top">About</a></li>
+              <li><a href="skills.html" target="_top">Skills</a></li>
+              <li><a href="projects.html" target="_top">Projects</a></li>
+              <li><a href="faq.html" target="_top">FAQ</a></li>
+          </ul>
+      </nav>
+    </section>
+  
+    <search id="search-section">
+      <form action="/search_results" method="get">
+      <input type="text" id="search-query" name="query" placeholder="Enter search term" required="required">
+      <button type="submit">Search</button>
+      <label for="search-query"></label>
+    </form>
+    </search>
+
+    <button id="theme_button">Switch to Dark Mode</button>
+  
+    </header>
 
   <main>
     <section id="faq">
@@ -43,10 +85,61 @@
           <p>I am not only a developer but also a problem-solver and I approach challenges with a creative mindset. Along with experience working on real-world projects, I also have attempted many programming problems and really enjoy the process in doing that. I think that mindset is something that helps me find solutions when it seems like nothing is working.  I am also committed to stay updated on the latest industry trends.</p>
         </details>
       </section>
+      
   </main>
+
 
   <br>
 
-  <iframe class="footer_frame" src="footer.html" style="width: 100%; height: 600px"></iframe>
+  <footer>
+    <h2>Contact Me</h2>
+    <form id="info_form" action="https://httpbin.org/post" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+          <input type="hidden" name="possible_bot" value="true" required>
+
+          <label for="name">Name: <span class="required_indicator">*</span></label><br>
+          <input type="text" id="name" name="name" required><br>
+          
+          <label for="email">Email: <span class="required_indicator">*</span></label><br>
+          <input type="email" id="email" name="email" required><br>
+
+          <label for="reason">Phone Number:</label><br>
+          <input type="tel" id="number" name="number" placeholder="555-555-5555" pattern="^\d{3}-\d{3}-\d{4}$"><br>
+        
+          <label for="comments">Comments: <span class="required_indicator">*</span></label><br>
+          <textarea id="comments" name="comments" required minlength="10" maxlength="500" pattern="^[a-zA-Z0-9\s.,!?'-]*$"></textarea>
+
+          <div id="character_count">500 characters remaining</div>
+
+          <output id="error-message" class="error">There was an error with your form submission.</output> <br>
+          <output id="info-message" class="info">This is some information about your form submission.</output> <br>
+          <button type="submit">Send Message</button>
+
+      </fieldset>
+    </form>
+  <address>
+    <ol>
+      <li>Email: dhruvwa16@gmail.com or dwadhwa@ucsd.edu</li>
+      <li>Phone Number: (858)-265-9236</li>
+    </ol>
+  </address>
+
+  <aside>
+    <a href="https://docs.google.com/document/d/1Dzt0p4-6dXW46FaSPXvXdBV16BM4bn0Tw_trmHvAwq4/edit?usp=sharing" target="_blank" title="Resume">Resume</a>
+    <br>
+    <a href="https://www.linkedin.com/in/dhruv-wadhwa-8180261b3/" target="_blank" title="Linkedin">Linkedin</a>
+    <br>
+    <a href="https://github.com/dwadhwa123" target="_blank">
+    <!-- Used chatgpt to generate this code -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+      <path fill="#181717" d="M12 0c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.801 8.207 11.387.6.111.82-.258.82-.575v-2.1c-3.338.727-4.04-1.583-4.04-1.583-.546-1.388-1.333-1.757-1.333-1.757-1.088-.74.082-.726.082-.726 1.2.084 1.833 1.233 1.833 1.233 1.063 1.827 2.791 1.298 3.473.994.106-.771.416-1.297.758-1.596-2.665-.301-5.466-1.333-5.466-5.922 0-1.306.465-2.378 1.234-3.217-.123-.303-.534-1.528.117-3.174 0 0 1.009-.322 3.303 1.232.958-.266 1.984-.399 3.003-.404 1.018.005 2.046.138 3.003.404 2.292-1.554 3.303-1.232 3.303-1.232.653 1.646.24 2.871.117 3.174.769.839 1.234 1.911 1.234 3.217 0 4.595-2.806 5.62-5.478 5.917.428.385.809 1.144.809 2.297v3.401c0 .318.219.689.828.573 4.767-1.586 8.206-6.085 8.206-11.387 0-6.627-5.373-12-12-12z"/>
+    </svg>  
+  </aside>
+</a>
+
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

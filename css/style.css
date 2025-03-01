@@ -1,17 +1,11 @@
 /* Styling for the header */
-.header{
-  background-color: lightblue;
-}
-
-.header {
-  display: flex;
-  justify-content: flex-start; 
-  align-items: flex-start;
+header {
+  height: 250px;
   padding: 0px 0px;
-  background-color: black;
+  width: 100vw;
+  background-color: lightgray; /*light mode */
   color: yellow;
 }
-
 
 #myCanvas {
   display: block;
@@ -48,7 +42,7 @@
 
   li a {
     text-decoration: none;
-    color: #fff;
+    color: brown; 
     font-size: 18px;
     transition: color 0.3s ease, transform 0.3s ease;
   }
@@ -95,7 +89,7 @@
     background-color: #0056b3;
   }
   
-.footer form {
+footer form {
     display: flex;
     flex-direction: column;             
     font-family: Arial, sans-serif;
@@ -126,7 +120,8 @@
   
 /* Styling for the footer */
 
-.footer {
+footer {
+  width: 100%;
   background-color: lightgrey;
 
   legend{
@@ -426,7 +421,7 @@ video {
     height: auto; 
     object-fit: cover;
   }
-  
+
 }
 
 @media (min-width: 501px) and (max-width: 800px) {
@@ -543,3 +538,44 @@ output {
   font-weight: bold;
 }
 
+#theme_button {
+  margin-top: 25px;
+  margin-left: calc(100vw - 295px);
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#theme_button:hover {
+  transform: scale(1.05);
+}
+
+body.dark_mode{
+  #faq details{
+    background-color: black;
+    
+    p{
+      color: white;
+    }
+  }
+
+  #faq summary{
+    color:plum
+  }
+
+  address{
+    color:green;
+  }
+
+  #theme_button{
+    color: white;
+  }
+
+}

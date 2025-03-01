@@ -4,59 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
     <link rel="stylesheet" href="css/style.css">
-   <style>
-      textarea:invalid, input:invalid{
-        border-color: red;
-        border-width: 1px;
-      }
-
-      textarea:valid, input:valid{
-        border-color: green;
-        border-width: 1.5px;
-      }
-
-      #name {
-        margin-bottom: 5px;
-      }
-
-      input:focus, textarea:focus {
-        border-color: #007bff;
-        border-width: 1.5px !important;
-        outline: none;
-      }
-
-      #email:invalid + #error_message{
-        content: "Invalid input, please enter a valid age.";
-      }
-
-      #error-message {
-        display: none;
-        color: red;
-      }
-
-      #info-message{
-        display: none;
-        color: green
-      }
-
-      .fade-out {
-        animation: fadeOut 1s forwards;
-      }
-
-      #character_count{
-        font-size: 0.8rem;
-      }
-
-      
-
-  </style> 
   
 </head>
 
 <body class="footer">
 <footer>
     <h2>Contact Me</h2>
-    <form action="https://httpbin.org/post" method="post">
+    <form id="info_form" action="https://httpbin.org/post" method="post">
       <fieldset>
         <legend>Personal Information</legend>
           <input type="hidden" name="possible_bot" value="true" required>
@@ -72,7 +26,6 @@
         
           <label for="comments">Comments: <span class="required_indicator">*</span></label><br>
           <textarea id="comments" name="comments" required minlength="10" maxlength="500" pattern="^[a-zA-Z0-9\s.,!?'-]*$"></textarea>
-          <!-- <small class="hint">Max 500 characters, no special symbols.</small> <br> -->
 
           <div id="character_count">500 characters remaining</div>
 
@@ -82,35 +35,6 @@
 
       </fieldset>
     </form>
-
-    <script>
-
-      const commentsField = document.getElementById('comments');
-      const errorMessage = document.getElementById('error-message');
-      
-      commentsField.addEventListener('input', function() {
-        const regex = /[^a-zA-Z0-9\s.,!?'-]/; 
-        
-        if (regex.test(commentsField.value)) {
-          errorMessage.style.display = 'block';
-          errorMessage.innerText = 'You have typed an illegal character. Please remove it.';
-        } 
-        else {
-          errorMessage.style.display = 'none';
-        }
-
-        const length = commentsField.value.length;
-        const charactersLeft = 500 - length;
-
-        const charCount = document.getElementById('character_count');
-
-        charCount.textContent = `${charactersLeft} characters remaining`;
-
-      });
-
-
-    </script>
-
   <address>
     <ol>
       <li>Email: dhruvwa16@gmail.com or dwadhwa@ucsd.edu</li>
@@ -130,7 +54,8 @@
     </svg>  
   </aside>
 </a>
-</body>
-  
-  
+
   </footer>
+  
+
+</body>
