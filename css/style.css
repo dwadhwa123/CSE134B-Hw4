@@ -600,8 +600,6 @@ body.dark_mode{
     color: white;
   }
 
-
-
   footer {
     background-color: rgb(50, 50, 50);
   
@@ -648,4 +646,16 @@ body.dark_mode{
   }
 
 
+}
+
+header{
+  form{
+    textarea:invalid, input:invalid{
+      border: none;
+    }
+  
+    textarea:valid, input:valid{
+      border: none;
+    }
+  }
 }
