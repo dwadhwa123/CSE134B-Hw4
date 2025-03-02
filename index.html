@@ -33,10 +33,10 @@
       ctx.fillText(text, 20, 30);
     </script>
      
-    <section id="link-section">
+    <section class="link-section">
       </script>
         <nav>
-          <ul id="navigation_links">
+          <ul class="navigation_links">
               <li><a href="index.html" target="_top">Home</a></li>
               <li><a href="about.html" target="_top">About</a></li>
               <li><a href="skills.html" target="_top">Skills</a></li>
@@ -46,15 +46,8 @@
       </nav>
     </section>
   
-    <search id="search-section">
-      <form action="/search_results" method="get">
-      <input type="text" id="search-query" name="query" placeholder="Enter search term" required="required">
-      <button type="submit">Search</button>
-      <label for="search-query"></label>
-    </form>
-    </search>
 
-    <button id="theme_button">Switch to Dark Mode</button>
+    <button class="theme_button">Switch to Dark Mode</button>
   
     </header>
     
@@ -98,28 +91,29 @@
 
 <footer>
   <h2>Contact Me</h2>
-  <form id="info_form" action="https://httpbin.org/post" method="post">
+  <form class="info_form" action="https://httpbin.org/post" method="post">
     <fieldset>
       <legend>Personal Information</legend>
-        <input type="hidden" name="possible_bot" value="true" required>
-
-        <label for="name">Name: <span class="required_indicator">*</span></label><br>
-        <input type="text" id="name" name="name" required><br>
+        <input type="hidden" name="possible_bot" value="true">
         
-        <label for="email">Email: <span class="required_indicator">*</span></label><br>
-        <input type="email" id="email" name="email" required><br>
+        <input type="hidden" class="form-errors" name="form-errors" value="">
 
-        <label for="reason">Phone Number:</label><br>
-        <input type="tel" id="number" name="number" placeholder="555-555-5555" pattern="^\d{3}-\d{3}-\d{4}$"><br>
+        <label for="name">Name: <span class="required_indicator">*</span></label>
+        <input type="text" class="name" name="name" required>
+        
+        <label for="email">Email: <span class="required_indicator">*</span></label>
+        <input type="email" class="email" name="email" required>
+
+        <label for="reason">Phone Number:</label>
+        <input type="tel" class="number" name="number" placeholder="555-555-5555" pattern="^\d{3}-\d{3}-\d{4}$">
       
-        <label for="comments">Comments: <span class="required_indicator">*</span></label><br>
-        <textarea id="comments" name="comments" required minlength="10" maxlength="500" pattern="^[a-zA-Z0-9\s.,!?'-]*$"></textarea>
+        <label for="comments">Comments: <span class="required_indicator">*</span></label>
+        <textarea class="comments" name="comments" required minlength="10" maxlength="500" pattern="^[a-zA-Z0-9\s.,!?'-]*$"></textarea>
 
-        <div id="character_count">500 characters remaining</div>
 
-        <output id="error-message" class="error">There was an error with your form submission.</output> <br>
-        <output id="info-message" class="info">This is some information about your form submission.</output> <br>
-        <button type="submit">Send Message</button>
+        <output class="error-message">There was an error with your form submission.</output> 
+        <output class="info-message">500 characters remaining</output>
+        <button type="submit" class="submit_button">Send Message</button>
 
     </fieldset>
   </form>

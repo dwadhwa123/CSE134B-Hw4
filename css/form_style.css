@@ -1,10 +1,10 @@
 textarea:invalid, input:invalid{
-    border-color: red;
+    border-color: black;
     border-width: 1px;
   }
 
   textarea:valid, input:valid{
-    border-color: green;
+    border-color: black;
     border-width: 1.5px;
   }
 
@@ -15,6 +15,10 @@ textarea:invalid, input:invalid{
 
     textarea:invalid, input:invalid{
       border-width: 2.5px;
+    }
+
+    .info-message{
+      color: white
     }
   }
 
@@ -28,24 +32,21 @@ textarea:invalid, input:invalid{
     outline: none;
   }
 
-  #email:invalid + #error_message{
-    content: "Invalid input, please enter a valid age.";
-  }
 
-  #error-message {
+  .error-message {
     display: none;
     color: red;
   }
 
-  #info-message{
-    display: none;
-    color: green
+  .info-message{
+    color: purple
   }
 
   .fade-out {
     animation: fadeOut 1s forwards;
   }
 
-  #character_count{
+  .character_count{
     font-size: 0.8rem;
   }
+

@@ -7,20 +7,20 @@ header {
   color: yellow;
 }
 
-#myCanvas {
+canvas{
   display: block;
   width: 500px;
   height: 34px;
 }
 
 
-#link-section {
+.link-section {
   margin-left: auto;
   margin-right: 20px;
 }
 
 /* Style for the navigation links nested */
-#navigation_links {
+.navigation_links {
 
 
   list-style-type: none;
@@ -58,18 +58,22 @@ header {
   }
 }
 
-#search-section{
-  margin-left: calc(100vw - 295px);
-}
 
 @media (max-width: 380px) {
-  #search-section{
-    margin-left: 85px;
-  }
 
-  #navigation_links {
+  .navigation_links {
     margin-left: 0px;
   }
+
+}
+
+
+@media (max-width: 500px) {
+
+  fieldset{
+    width: 70%;
+  }
+  
 }
 
 
@@ -93,7 +97,6 @@ footer form {
     display: flex;
     flex-direction: column;             
     font-family: Arial, sans-serif;
-    margin: 20px;
     max-width: 600px;
 }
 
@@ -112,9 +115,6 @@ footer form {
     border-color: red;
   }
 
-  search form:has(input:focus) button {
-    border-color: red; 
-  }
 
 
   
@@ -150,10 +150,10 @@ footer {
     margin: 5px 20px;
   }
 
-  #comments{
-    width: 500px;
+  .comments{
+    width: 100%;
     max-width: 500px;
-    min-width: 500px;
+    min-width: 200px;
     max-height: 200px;
     height: 80px;
   }
@@ -535,7 +535,7 @@ output {
   font-weight: bold;
 }
 
-#theme_button {
+.theme_button {
   margin-top: 25px;
   margin-left: calc(100vw - 295px);
   display: flex;
@@ -550,8 +550,9 @@ output {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-#theme_button:hover {
+.theme_button:hover {
   transform: scale(1.05);
+  background-color: #4CAF50;
 }
 
 body.dark_mode{
@@ -571,7 +572,7 @@ body.dark_mode{
     color:lightgreen;
   }
 
-  #theme_button{
+  .theme_button{
     color: white;
   }
 
@@ -579,7 +580,7 @@ body.dark_mode{
     background-color: rgb(50, 50, 50);
   }
 
-  #navigation_links{
+  .navigation_links{
     li a {
       color: orange; 
     }
@@ -619,7 +620,7 @@ body.dark_mode{
       color: green;
     }
   
-    #comments{
+    .comments{
       color: black;
     }
 
@@ -658,4 +659,36 @@ header{
       border: none;
     }
   }
+}
+
+
+
+.info_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.name{
+  width: 50%;
+}
+
+.email{
+  width: 50%;
+}
+
+.number{
+  width: 50%;
+}
+
+footer button{
+  width: 50%;
 }
