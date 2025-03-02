@@ -692,3 +692,8 @@ fieldset {
 footer button{
   width: 50%;
 }
+
+h1{
+  color: green;
+  margin: 0px;
+}
