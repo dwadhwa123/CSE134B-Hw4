@@ -180,7 +180,6 @@ submitButton.addEventListener('click', function(event) {
     console.log('Form is valid.');
 
   } else {
-    form.submit();
     console.log('Form errors:', form_errors);
   }
 });
