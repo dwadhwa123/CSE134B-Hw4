@@ -4,23 +4,37 @@ const button = document.querySelector('.theme_button');
 
 if (localStorage.getItem('theme') === 'dark') {
   document.body.classList.add('dark_mode');
+  button.textContent = 'Switch to Ocean Mode'; 
+} 
+else if (localStorage.getItem('theme') === 'ocean') {
+  document.body.classList.add('ocean_mode');
   button.textContent = 'Switch to Light Mode'; 
-} else {
+} 
+else {
   button.textContent = 'Switch to Dark Mode';
 }
 
 button.addEventListener('click', () => {
-  document.body.classList.toggle('dark_mode');
-
+  // Cycle through the themes: Dark -> Ocean -> Light
   if (document.body.classList.contains('dark_mode')) {
-    localStorage.setItem('theme', 'dark');
+    document.body.classList.remove('dark_mode');
+    document.body.classList.add('ocean_mode');
+    localStorage.setItem('theme', 'ocean');
     button.textContent = 'Switch to Light Mode'; 
-  } else {
+  } 
+  else if (document.body.classList.contains('ocean_mode')) {
+    document.body.classList.remove('ocean_mode');
+    document.body.classList.add('light_mode');
     localStorage.setItem('theme', 'light');
     button.textContent = 'Switch to Dark Mode'; 
+  } 
+  else {
+    document.body.classList.remove('light_mode');
+    document.body.classList.add('dark_mode');
+    localStorage.setItem('theme', 'dark');
+    button.textContent = 'Switch to Ocean Mode'; 
   }
 });
-
 
 
 const commentsField = document.querySelector('.comments');

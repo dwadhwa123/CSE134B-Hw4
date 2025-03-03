@@ -288,11 +288,6 @@ h2{
   color: var(--primary-color, blue);
 }
 
-p{
-  font-size: var(--font-size, 14px);
-  font-family: var(--font-family)
-}
-
 
 
 
@@ -696,4 +691,108 @@ footer button{
 h1{
   color: green;
   margin: 0px;
+}
+
+body.ocean_mode{
+  #faq details{
+    background-color: rgb(93, 93, 250);
+    
+    p{
+      color: black;
+    }
+  }
+
+  #faq summary{
+    color:white
+  }
+
+  address{
+    color:white;
+  }
+
+  .theme_button{
+    color: white;
+  }
+
+  header{
+    background-image: linear-gradient(rgb(223, 245, 114), lightblue, blue)
+  }
+
+  .navigation_links{
+    li a {
+      color: purple; 
+    }
+
+    li a:hover{
+      color: plum;
+      
+    }
+    }
+ 
+
+  aside a {
+    color: white;
+    text-decoration: none;
+  }
+
+  svg{
+    color: white;
+  }
+
+  footer {
+    background-image: linear-gradient(rgb(233, 245, 172), lightblue, blue);
+  
+    legend{
+      color: black
+    }
+  
+    form {
+      background-color: rgb(247, 198, 207);
+      border: 1px solid yellow;
+    }
+  
+    label, div {
+      color: black
+    }
+    h2{
+      color: green;
+    }
+  
+    .comments{
+      color: black;
+    }
+
+    input::placeholder{
+      color: black;
+    }
+
+    fieldset {
+      border: 2px solid #4CAF50;
+      background-color: lightblue; 
+    } 
+  }
+
+  main{
+    background: lightblue;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #about, #projects{
+    color: black;
+  }
+
+  #about{
+    p{
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+
+  cite a{
+    color: green;
+  }
+
+  
+  
+
+
 }
