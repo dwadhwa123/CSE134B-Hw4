@@ -234,6 +234,15 @@ aside a:hover {
   }
 }
 
+:root {
+  --primary-color: green;
+  --font-size: 15px;
+  --font-family: 'monospace', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+main{
+  font-family: var(--font-family);
+}
 
 
 
